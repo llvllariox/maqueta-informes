@@ -1,0 +1,331 @@
+<div class="row">
+    <div class="col-10 text-center">
+        <b style="margin: 20px;font-weight: bold;text-align: center;">
+                Correctivos [Solicitudes - Incidentes - (Mtto/Prod/Cancelaciones) - Soportes] 
+            </b>
+    </div>
+
+    <div class="col-2" style="text-align: center">
+        <b>
+                06 Julio 2020
+              </b>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-lg-6">
+        <div style="height: 350px;">
+            <div class="card h-100">
+                <div class="row justify-content-between">
+                    <div class="col-lg-10">
+                        <b style="margin-left:10px;font-weight: bold;">
+                                Consumo por línea (Inc/Sop) 
+                            </b>
+                    </div>
+                    <div class="col-lg-2">
+                        <label>
+                                en horas
+                            </label>
+                    </div>
+                </div>
+                <div class="card-body">
+
+                    <div class="row h-100">
+                        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
+                                </canvas>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div style="height: 350px;">
+            <div class="card h-100">
+                <div class="row justify-content-between">
+                    <div class="col-lg-3">
+                        <br>
+                    </div>
+                    <div class="col-lg-5 text-center">
+                        <b style="font-weight: bold;">
+                                Estados de Inciedentes
+                            </b>
+                    </div>
+                </div>
+                <div class="card-body">
+
+                    <div class="row h-100">
+                        <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" [options]="doughnutChartOptions">
+                             </canvas>
+                    </div>
+                </div>
+                <div class="row justify-content-end">
+                    <label style="margin-right: 25px;">en cantidad </label>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<div class="row" style="height: 350px;">
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 h-100">
+        <div class="card h-100">
+            <div class="row">
+                <span style="margin-left: 20px;"></span>
+                <div class="col-lg-7">
+                    <b style="text-align: left;font-weight: bold;">
+                        Replanificaciones Inc/Sop
+                    </b>
+
+                </div>
+                <div class="col-lg-4" style="text-align: right;">
+                    <label>
+                        en cantidad
+                      </label>
+
+                </div>
+            </div>
+            <div class="card-body">
+                <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType" [options]="pieChartOptions" [plugins]="pieChartPlugins" [legend]="pieChartLegend">
+            </canvas>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-5 col-md-4 col-sm-6 col-xs-12 h-100">
+        <div class="card h-100">
+            <div class="row">
+                <span style="margin-left: 20px;"></span>
+                <div class="col-lg-7">
+                    <b style="text-align: left;font-weight: bold;">
+                        Desgaste Presupuesto
+                    </b>
+
+                </div>
+                <div class="col-lg-4" style="text-align: right;">
+                    <label>
+                        en horas
+                      </label>
+
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row h-100">
+
+                    <div class="col-lg-4">
+                        <br>
+                        <br>
+                        <br>
+                        <h6>216 Servicios</h6>
+                        <hr>
+                        <h6>48 Producción</h6>
+                        <hr>
+                        <h6>654 Inc/Sop/</h6>
+                    </div>
+                    <div class="col-lg-4 h-100">
+                        <canvas baseChart [data]="doughnut2ChartData" [labels]="doughnut2ChartLabels" [chartType]="doughnut2ChartType" [options]="doughnut2ChartOptions">
+                         </canvas>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="col-xs-1 h-100 text-center  center-block">
+                            <svg style="margin-top: 30%;" class="bi bi-exclamation-triangle-fill" width="auto" height="70px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 5zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                              </svg>
+
+                            <h3>720 Presupuesto</h3>
+                            <hr>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 h-100">
+        <div class="card h-100">
+            <div class="row">
+                <span style="margin-left: 20px;"></span>
+                <div class="col-lg-7">
+                    <b style="text-align: left;font-weight: bold;">
+                        Criticidad de Incidentes
+                    </b>
+
+                </div>
+                <div class="col-lg-4" style="text-align: right;">
+                    <label>
+                        en cantidad
+                      </label>
+
+                </div>
+            </div>
+            <div class="card-body">
+                <canvas baseChart [data]="pie2ChartData" [labels]="pie2ChartLabels" [chartType]="pie2ChartType" [options]="pie2ChartOptions" [plugins]="pie2ChartPlugins" [legend]="pie2ChartLegend">
+            </canvas>
+            </div>
+
+        </div>
+    </div>
+</div>
+<br>
+<div class="row" style="height: 400px;">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 h-100">
+        <div class="card h-100">
+            <div class="row">
+                <span style="margin-left: 20px;"></span>
+                <div class="col-lg-6">
+                    <b style="text-align: left;font-weight: bold;">
+                        Incidentes en Curso 
+                    </b>
+                    <br>
+                </div>
+                <div class="col-lg-5" style="text-align: end;font-size:13px;">
+                    <label>
+                        En cantidad
+                      </label>
+
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row justify-content-center">
+                    <h1 style="font-weight: bold;font-size: 65px;">7</h1>
+                </div>
+                <div class="row">
+                    <br>
+                </div>
+                <div class="row justify-content-center">
+                    <label>Total</label>
+                </div>
+                <hr>
+                <div class="row">
+                    <canvas baseChart height=" 190 " [datasets]="barhor2ChartData" [options]="barhor2ChartOptions" [labels]="barhor2ChartLabels" [plugins]="barhor2ChartPlugins" [legend]="barhor2ChartLegend" [chartType]="barhor2ChartType">
+                    </canvas>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 h-100">
+        <div class="card h-100">
+            <div class="row">
+                <span style="margin-left: 20px;"></span>
+                <div class="col-lg-6">
+                    <b style="text-align: left;font-weight: bold;">
+                        Incidentes Cerrados
+                    </b>
+
+                </div>
+                <div class="col-lg-5" style="text-align: end;font-size:13px;">
+                    <label>
+                        En cantidad
+                      </label>
+
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row justify-content-center">
+                    <h1 style="font-weight: bold;font-size: 65px;">2</h1>
+                </div>
+                <div class="row">
+                    <br>
+                </div>
+                <div class="row justify-content-center">
+                    <label>Total</label>
+                </div>
+                <hr>
+                <div class="row">
+                    <canvas baseChart height=" 190 " [datasets]="barhor3ChartData" [labels]="barhor3ChartLabels" [options]="barhor3ChartOptions" [plugins]="barhor3ChartPlugins" [legend]="barhor3ChartLegend" [chartType]="barhor3ChartType">
+                    </canvas>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 h-100">
+        <div class="card h-100">
+            <div class="row">
+                <span style="margin-left: 20px;"></span>
+                <div class="col-lg-6">
+                    <b style="text-align: left;font-weight: bold;">
+                        Soportes en Curso
+                    </b>
+                </div>
+                <div class="col-lg-5" style="text-align: end;font-size:13px;">
+                    <label>
+                        En cantidad
+                      </label>
+
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row justify-content-center">
+                    <h1 style="font-weight: bold;font-size: 65px;">15</h1>
+                </div>
+                <div class="row">
+                    <br>
+                </div>
+                <div class="row justify-content-center">
+                    <label>Total</label>
+                </div>
+                <hr>
+                <div class="row">
+                    <canvas baseChart height=" 190 " [datasets]="barhor4ChartData" [labels]="barhor4ChartLabels" [options]="barhor4ChartOptions" [plugins]="barhor4ChartPlugins" [legend]="barhor4ChartLegend" [chartType]="barhor4ChartType">
+                    </canvas>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 h-100">
+        <div class="card h-100">
+            <div class="row">
+                <span style="margin-left: 20px;"></span>
+                <div class="col-lg-6">
+                    <b style="text-align: left;font-weight: bold;">
+                        Soportes Cerrados
+                    </b>
+                    <br>
+                </div>
+                <div class="col-lg-5" style="text-align: end;font-size:13px;">
+                    <label>
+                        En cantidad
+                      </label>
+
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="row justify-content-center">
+                    <h1 style="font-weight: bold;font-size: 65px;">18</h1>
+                </div>
+                <div class="row">
+                    <br>
+                </div>
+                <div class="row justify-content-center">
+                    <label>Total</label>
+                </div>
+                <hr>
+                <div class="row">
+                    <canvas baseChart height=" 190 " [datasets]="barhor5ChartData" [labels]="barhor5ChartLabels" [options]="barhor5ChartOptions" [plugins]="barhor5ChartPlugins" [legend]="barhor5ChartLegend" [chartType]="barhor5ChartType">
+                    </canvas>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>

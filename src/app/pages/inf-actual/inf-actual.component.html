@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-md-12">
+      <div class="card card-body">
+        <h3 class="box-title m-b-0">Consulta los Informes en Curso</h3>
+        <p class="text-muted m-b-30 font-13">
+            La información desplegada corresponde al informe actual, es decir al último generado y validado.
+        </p>
+            <div class="container">
+                    <div class="row">
+                      <div class="col-sm">
+                            <button type="button"   (click)="buscar()" class="btn waves-effect waves-light btn-rounded btn-primary"><i class="fa fa-search "></i>  Ver Inf. BackOffice</button>
+                      </div>
+                      <div class="col-sm">
+                            <button type="button"   (click)="buscar()" class="btn waves-effect waves-light btn-rounded btn-success"><i class="fa fa-search "></i>  Ver Inf. BackEnd</button>
+                            
+                      </div>
+                      <div class="col-sm">
+                            <button type="button"   (click)="buscar()" class="btn waves-effect waves-light btn-rounded btn-info"><i class="fa fa-search "></i>  Ver Inf. Integración</button>
+                      </div>
+                    </div>
+            </div>
+      </div>
+    </div>  
+</div>
+<br />
+<div class="row" *ngIf="mostrar">
+      <app-slide tipoInforme="HI"></app-slide>        
+</div>
+  
+  
+  
+  

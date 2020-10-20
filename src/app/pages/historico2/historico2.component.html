@@ -1,0 +1,101 @@
+<div class="row">
+    <div class="col-md-9">
+        <div class="card card-body">
+            <h3 class="box-title m-b-0">Consulta Histórica de Informes</h3>
+            <p class="text-muted m-b-30 font-13">
+                Permite realizar búsquedas de informes por una semana determinada, o también por un Requerimiento/Línea determinada.
+            </p>
+            <form class="form-horizontal">
+                <div class="form-group row align-middle">
+                    <!-- <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label"
+            >Tipo Informe
+          </label> -->
+                    <label class="col-sm-3 text-right">
+          Tipo de Búsqueda
+          </label>
+                    <div class="demo-radio-button col-sm-9">
+
+                        <p-radioButton name="groupname" value="semana" [(ngModel)]="selectedRadio" (click)="ClickRadio()"></p-radioButton>
+                        &nbsp;<label for="radio_1">&nbsp;Búsqueda x Semana</label>
+                        <!-- <p-radioButton name="groupname" value="linea" [(ngModel)]="selectedRadio" (click)="ClickRadio()"></p-radioButton>
+                        &nbsp;<label for="radio_2">&nbsp;Búsqueda x Línea</label> -->
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">Seleccione Semana
+          </label>
+                    <div class="col-sm-9">
+                        <select class="form-control" [disabled]="activarfecha">
+              <option *ngFor="let f of fechas">{{ f.label }}</option>
+            </select>
+                        <!-- <p-dropdown [disabled]='activarfecha'  [options]="fechas" [(ngModel)]="selectedFecha"></p-dropdown> -->
+                    </div>
+                </div>
+                <!-- <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">Ingrese Semana</label
+          >
+          <div class="col-sm-9">
+            <input
+              type="date"
+              [disabled]="activarfecha"
+              class="form-control"
+              id="inputEmail3"
+              placeholder="Website"
+            />
+          </div>
+        </div> -->
+
+                <div class="form-group row align-middle">
+                    <label for="inputPassword4" class="col-sm-3 text-right">Tipo de Informe</label>
+
+
+                    <div class="offset-sm-3 col-sm-9">
+                        <div class="checkbox checkbox-success">
+                            <input id="checkboxTO" type="checkbox" [disabled]="activarfecha" />
+                            <label for="checkboxTO">Todos</label>&nbsp;
+                            <input id="checkboxBO" type="checkbox" [disabled]="activarfecha" />
+                            <label for="checkboxBO">Evolutivo</label>&nbsp;
+                            <input id="checkboxBA" type="checkbox" [disabled]="activarfecha" />
+                            <label for="checkboxBA">Correctivo</label>&nbsp;
+                            <input id="checkboxIN" type="checkbox" [disabled]="activarfecha" />
+                            <label for="checkboxIN">Presupuesto</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-3 text-right control-label col-form-label">Ingrese Cod. Línea</label
+          >
+          <div class="col-sm-9">
+            <input
+              type="text"
+              class="form-control"
+              id="inputPassword3"
+              placeholder="MA00XXX"
+              [disabled]="!activarfecha"
+            />
+          </div>
+        </div> -->
+
+
+                <div class="form-group  m-b-0">
+                    <div class="offset-sm-3 col-sm-12">
+                        <button type="submit" (click)="Buscar()" class="btn btn-info waves-effect waves-light m-t-10">
+              Buscar
+            </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<br />
+<div class="row" *ngIf="mostrar && tipoInforme === 'HI'">
+    <!-- <app-slide tipoInforme="HI"></app-slide> -->
+    <app-graficas2></app-graficas2>
+</div>
+
+<div class="row" *ngIf="mostrar && tipoInforme === 'LI' ">
+    <app-slide tipoInforme="LI"></app-slide>
+</div>

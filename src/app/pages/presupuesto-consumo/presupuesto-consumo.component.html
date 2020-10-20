@@ -1,0 +1,356 @@
+<div class="row">
+    <div class="col-10 text-center">
+        <b style="margin: 20px;font-weight: bold;text-align: center;">
+                
+            </b>
+    </div>
+
+    <div class="col-2" style="text-align: center">
+        <b>
+                06 Julio 2020
+              </b>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-lg-12">
+        <div style="height: 350px;">
+            <div class="card h-100">
+                <div class="row justify-content-between">
+                    <div class="col-lg-12 text-center">
+                        <u style="margin-left:10px;font-weight: bold;">
+                                Presupuesto vs Consumo anual
+                            </u>
+                    </div>
+
+                </div>
+                <div class="card-body">
+
+                    <div class="row h-100">
+                        <canvas baseChart width="400" height="300" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" [plugins]="lineChartPlugins">
+                          </canvas>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<br>
+<div class="row" style="height: 350px;">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 h-100">
+        <div class="card h-100">
+            <div class="row">
+                <span style="margin-left: 20px;"></span>
+                <div class="col-lg-7">
+                    <b style="text-align: left;font-weight: bold;">
+                        Producción
+                    </b>
+
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row justify-content-center">
+                    <rg-gauge-chart [canvasWidth]="canvasWidth" [needleValue]="needleValue" [centralLabel]="centralLabel" [options]="options" [bottomLabel]="bottomLabel">
+                    </rg-gauge-chart>
+                </div>
+                <div class="row justify-content-center" style="background-color: darkgray; margin-top: 10px;">
+                    <b style="font-weight: bold; font-size: 30px;color:black;">
+                        48hh
+                    </b>
+                    <b style="font-size: 30px;color: black;">
+                        /360hh &nbsp;
+                    </b>
+                    <b style="font-size: 15px; margin-top: 3%;color:white;">
+                        [Presupuesto]
+                    </b>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 h-100">
+        <div class="card h-100">
+            <div class="row">
+                <span style="margin-left: 20px;"></span>
+                <div class="col-lg-7">
+                    <b style="text-align: left;font-weight: bold;">
+                        Servicios
+                    </b>
+
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row justify-content-center">
+                    <rg-gauge-chart [canvasWidth]="canvas2Width" [needleValue]="needle2Value" [centralLabel]="central2Label" [options]="options2" [bottomLabel]="bottom2Label">
+                    </rg-gauge-chart>
+                </div>
+                <div class="row justify-content-center" style="background-color: darkgray; margin-top: 10px;">
+                    <b style="font-weight: bold; font-size: 30px;color: black;">
+                        216hh
+                    </b>
+                    <b style="font-size: 30px;color: black;">
+                        /180hh &nbsp;
+                    </b>
+                    <b style="font-size: 15px; margin-top: 3%;color:white;">
+                        [Presupuesto]
+                    </b>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 h-100">
+        <div class="card h-100">
+            <div class="row">
+                <span style="margin-left: 20px;"></span>
+                <div class="col-lg-7">
+                    <b style="text-align: left;font-weight: bold;">
+                        Evolutivo
+                    </b>
+
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row justify-content-center">
+                    <rg-gauge-chart [canvasWidth]="canvas3Width" [needleValue]="needle3Value" [centralLabel]="central3Label" [options]="options3" [bottomLabel]="bottom3Label">
+                    </rg-gauge-chart>
+                </div>
+                <div class="row justify-content-center" style="background-color: darkgray; margin-top: 10px;">
+                    <b style="font-weight: bold; font-size: 30px;color: black;">
+                        715.5hh
+                    </b>
+                    <b style="font-size: 30px;color: black;">
+                        /900hh &nbsp;
+                    </b>
+                    <b style="font-size: 15px; margin-top: 3%;color:white;">
+                        [Presupuesto]
+                    </b>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 h-100">
+        <div class="card h-100">
+            <div class="row">
+                <span style="margin-left: 20px;"></span>
+                <div class="col-lg-7">
+                    <b style="text-align: left;font-weight: bold;">
+                        Correctivo
+                    </b>
+
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row justify-content-center">
+                    <rg-gauge-chart [canvasWidth]="canvas4Width" [needleValue]="needle4Value" [centralLabel]="central4Label" [options]="options4" [bottomLabel]="bottom4Label">
+                    </rg-gauge-chart>
+                </div>
+                <div class="row justify-content-center" style="background-color: darkgray; margin-top: 10px;">
+                    <b style="font-weight: bold; font-size: 30px;color: black;">
+                        654hh
+                    </b>
+                    <b style="font-size: 30px;color: black;">
+                        /180hh &nbsp;
+                    </b>
+                    <b style="font-size: 15px; margin-top: 3%;color:white;">
+                        [Presupuesto]
+                    </b>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="row" style="height: 350px;">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 h-100">
+        <div class="card h-100">
+            <div class="row">
+                <span style="margin-left: 20px;"></span>
+                <div class="col-lg-6">
+                    <b style="text-align: left;font-weight: bold;">
+                        Servicios
+                    </b>
+                    <br>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="table-responsive-lg w-100">
+                        <table class="table table-striped table-primary">
+                            <thead>
+                                <tr>
+                                    <th scope="col">&nbsp;</th>
+                                    <th scope="col" style="text-align: center;font-weight: bold;">Servicios</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Antes de Mayo</td>
+                                    <td style="text-align: center;font-weight: bold;">3</td>
+                                </tr>
+                                <tr>
+                                    <td>Ingresados Mayo</td>
+                                    <td style="text-align: center;font-weight: bold;">11</td>
+                                </tr>
+                                <tr>
+                                    <td>Cerrados totales</td>
+                                    <td style="text-align: center;font-weight: bold;">6</td>
+                                </tr>
+                                <tr>
+                                    <td>En Curso</td>
+                                    <td style="text-align: center;font-weight: bold;">8</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <p style="text-align:justify;font-size: 13px;">
+                        * En curso inluye QA y Detenidos/Servicio está incluído en la línea de Soportes
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-5 col-md-4 col-sm-6 col-xs-12 h-100">
+        <div class="card h-100">
+            <div class="row">
+                <span style="margin-left: 20px;"></span>
+                <div class="col-lg-6">
+                    <b style="text-align: left;font-weight: bold;">
+                        Evolutivo
+                    </b>
+                    <br>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="table-responsive-lg w-100">
+                        <table class="table table-striped table-primary">
+                            <thead>
+                                <tr>
+                                    <th scope="col">&nbsp;</th>
+                                    <th scope="col" style="text-align: center;font-weight: bold;">Problemas</th>
+                                    <th scope="col" style="text-align: center;font-weight: bold;">Mantenimientos</th>
+                                    <th scope="col" style="text-align: center;font-weight: bold;">Proyectos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Antes</td>
+                                    <td style="text-align: center;font-weight: bold;">2</td>
+                                    <td style="text-align: center;font-weight: bold;">8</td>
+                                    <td style="text-align: center;font-weight: bold;">4</td>
+                                </tr>
+                                <tr>
+                                    <td>Ingresados</td>
+                                    <td style="text-align: center;font-weight: bold;">1</td>
+                                    <td style="text-align: center;font-weight: bold;">4</td>
+                                    <td style="text-align: center;font-weight: bold;">4</td>
+                                </tr>
+                                <tr>
+                                    <td>Cerrados</td>
+                                    <td style="text-align: center;font-weight: bold;">1</td>
+                                    <td style="text-align: center;font-weight: bold;">0</td>
+                                    <td style="text-align: center;font-weight: bold;">0</td>
+                                </tr>
+                                <tr>
+                                    <td>En Curso</td>
+                                    <td style="text-align: center;font-weight: bold;">2</td>
+                                    <td style="text-align: center;font-weight: bold;">12</td>
+                                    <td style="text-align: center;font-weight: bold;">8</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <p style="text-align:justify;font-size: 13px;">
+                        * En curso inluye QA y Detenidos
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 h-100">
+        <div class="card h-100">
+            <div class="row">
+                <span style="margin-left: 20px;"></span>
+                <div class="col-lg-6">
+                    <b style="text-align: left;font-weight: bold;">
+                        Correctivo
+                    </b>
+                    <br>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="table-responsive-lg w-100">
+                        <table class="table table-striped table-primary">
+                            <thead>
+                                <tr>
+                                    <th scope="col">&nbsp;</th>
+                                    <th scope="col" style="text-align: center; font-weight: bold;">Incidentes</th>
+                                    <th scope="col" style="text-align: center; font-weight: bold;">Soportes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Antes</td>
+                                    <td style="text-align: center;font-weight: bold;">4</td>
+                                    <td style="text-align: center;font-weight: bold;">11</td>
+                                </tr>
+                                <tr>
+                                    <td>Ingresados</td>
+                                    <td style="text-align: center;font-weight: bold;">5</td>
+                                    <td style="text-align: center;font-weight: bold;">22</td>
+                                </tr>
+                                <tr>
+                                    <td>Cerrados</td>
+                                    <td style="text-align: center;font-weight: bold;">2</td>
+                                    <td style="text-align: center;font-weight: bold;">18</td>
+                                </tr>
+                                <tr>
+                                    <td>En Curso</td>
+                                    <td style="text-align: center;font-weight: bold;">7</td>
+                                    <td style="text-align: center;font-weight: bold;">15</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <p style="text-align:justify;font-size: 13px;">
+                        * En curso inluye QA y Detenidos/Servicio está incluído en la línea de Soportes
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+</div>

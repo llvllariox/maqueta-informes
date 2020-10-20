@@ -1,0 +1,394 @@
+<div class="container-fluid">
+
+    <div style="height: 350px;">
+        <!-- <div class="card w-100 h-100">
+            <div class="row">
+                <div class="col-10">
+                    <b style="margin: 20px;font-weight: bold;">
+                        Evolutivos [Requerimientos - Problemas - Mantenciones - Proyectos] 
+                    </b>
+                    
+                  </div>
+                  <div class="col-2" style="text-align: center">
+                      <b>
+                        Mayo 2020
+                      </b>
+                      
+                  </div>
+            </div>   
+            <div class="card-body">
+                <canvas baseChart 
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [plugins]="barChartPlugins"
+                [legend]="barChartLegend"
+                [chartType]="barChartType">
+                </canvas>
+            </div>
+        </div> -->
+
+        <div class="row">
+            <div class="col-10 text-center">
+                <b style="margin: 20px;font-weight: bold;">
+                        Evolutivos [Requerimientos - Problemas - Mantenciones - Proyectos] 
+                    </b>
+
+            </div>
+            <div class="col-2" style="text-align: center">
+                <b>
+                        06 Julio 2020
+                      </b>
+
+            </div>
+        </div>
+        <br>
+        <div class="card w-100 h-100">
+            <div class="card-body">
+                <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
+                        </canvas>
+            </div>
+            <div class="row">
+                <div class="col-lg-9">
+                    <b style="margin-left:10px;font-weight: bold;">
+                                Prob/Man/Proy por Sistema
+                            </b>
+                </div>
+                <div class="col-lg-3 text-right" style="text-align: end;">
+                    <label>
+                                en cantidad&nbsp;&nbsp;
+                            </label>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <div class="row" style="height: 350px;">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 h-100">
+            <div class="card h-100">
+                <div class="row">
+                    <span style="margin-left: 10px;"></span>
+
+                    <div class="col-lg-7">
+                        <b style="text-align: left;font-weight: bold;">
+                            Replanificaciones Prob/Man/Proy
+                        </b>
+
+                    </div>
+
+                    <div class="col-lg-4" style="text-align: right;">
+                        <label>
+                            En cantidad
+                        </label>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType" [options]="pieChartOptions" [plugins]="pieChartPlugins" [legend]="pieChartLegend">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-5 col-md-4 col-sm-6 col-xs-12 h-100">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="row h-100">
+                        <!-- <span style="margin-left: 10px;"></span> -->
+                        <div class="col-lg-4">
+
+                            <div class="row">
+                                <strong style="text-align: center;font-weight: bold; margin-left: 10px;">
+                                    Desgaste Presupuesto
+                                </strong>
+                            </div>
+                            <br>
+                            <hr>
+                            <h6 class="font-weight-bold">31 <a class="font-weight-normal">Problemas</a></h6>
+                            <hr>
+                            <h6 class="font-weight-bold">303,5 <a class="font-weight-normal">Mantenciones</a></h6>
+                            <hr>
+                            <h6 class="font-weight-bold">381 <a class="font-weight-normal">Proyectos</a></h6>
+                        </div>
+
+                        <div class="col-lg-4 h-100">
+                            <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" [options]="doughnutChartOptions">
+                            </canvas>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="row justify-content-center">
+                                <label>
+                                    en horas
+                                </label>
+                            </div>
+                            <div class="col-xs-1 h-100 text-center  center-block">
+                                <hr style="margin-top: 50%;">
+                                <h5 class="font-weight-bold">900 <a class="font-weight-normal">Presupuesto</a></h5>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 h-100">
+            <div class="card h-100">
+                <div class="card-body h-100">
+
+                    <div class="row justify-content-end" style="margin-right: 10px;">
+                        <label>en horas</label>
+                    </div>
+
+                    <div class="row h-75">
+                        <div class="col-11 h-100">
+                            <canvas baseChart [datasets]="barhorChartData" [labels]="barhorChartLabels" [options]="barhorChartOptions" [plugins]="barhorChartPlugins" [legend]="barhorChartLegend" [chartType]="barhorChartType">
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="row" style="height: 400px;">
+
+        <!-- <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 h-100"> -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 h-100">
+            <div class="card h-100">
+
+                <div class="row">
+
+                    <span style="margin-left: 10px;"></span>
+                    <div class="col-lg-6">
+                        <b style="text-align: left;font-weight: bold;font-size:13px;">
+                                Ticket en Curso 
+                            </b>
+                        <br>
+                        <b style="text-align: left;font-size:10px;">
+                                Al cerrar el mes
+                            </b>
+                    </div>
+
+                    <div class="col-lg-5" style="text-align: end;font-size:10px;">
+                        <label>
+                                En cantidad
+                            </label>
+                    </div>
+
+                </div>
+
+
+                <div class="row justify-content-center mt-2">
+                    <h1 style="font-weight: bold;font-size: 65px;">22</h1>
+                </div>
+
+                <div class="row">
+                    <br>
+                </div>
+
+                <div class="row justify-content-center">
+                    <label>Total</label>
+                </div>
+
+
+
+                <div class="card-body">
+
+                    <hr>
+                    <div class="row">
+                        <!-- <div class="col-2"> -->
+                        <canvas baseChart [datasets]="barhor2ChartData" [options]="barhor2ChartOptions" [plugins]="barhor2ChartPlugins" [legend]="barhor2ChartLegend" [chartType]="barhor2ChartType">
+                                        </canvas>
+                        <!-- </div> -->
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 h-100">
+            <div class="card h-100">
+                <div class="row">
+                    <span style="margin-left: 5px;"></span>
+                    <div class="col-lg-6">
+                        <b style="text-align: left;font-weight: bold;font-size:12px;">
+                                    SWF
+                                </b>
+                        <br>
+                        <b style="text-align: left;font-size:10px;">Al cerrar el mes</b>
+                    </div>
+                    <div class="col-lg-5" style="text-align: end;font-size:10px;">
+                        <label>
+                                    En cantidad
+                                 </label>
+
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mt-2">
+                    <h1 style="font-weight: bold;font-size: 65px;">5</h1>
+                </div>
+                <div class="row">
+                    <br>
+                </div>
+                <div class="row justify-content-center">
+                    <label>Total</label>
+                </div>
+
+                <div class="card-body">
+                    <hr>
+                    <div class="row">
+                        <canvas baseChart height=" 140 " [datasets]="barhor3ChartData" [labels]="barhor3ChartLabels" [options]="barhor3ChartOptions" [plugins]="barhor3ChartPlugins" [legend]="barhor3ChartLegend" [chartType]="barhor3ChartType">
+                            </canvas>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 h-100">
+            <div class="card h-100">
+                <div class="row">
+                    <span style="margin-left: 10px;"></span>
+                    <div class="col-lg-6">
+                        <b style="text-align: left;font-weight: bold;font-size:13px;">
+                            TBK Detenidos
+                        </b>
+                        <br>
+                        <b style="text-align: left;font-size:10px;">Al cerrar el mes</b>
+                    </div>
+                    <div class="col-lg-5" style="text-align: end;font-size:10px;">
+                        <label>
+                            En cantidad
+                          </label>
+
+                    </div>
+                </div>
+                <div class="row justify-content-center mt-2">
+                    <h1 style="font-weight: bold;font-size: 65px;">5</h1>
+                </div>
+                <div class="row">
+                    <br>
+                </div>
+                <div class="row justify-content-center">
+                    <label>Total</label>
+                </div>
+
+
+
+                <div class="card-body">
+
+                    <hr>
+                    <div class="row">
+                        <canvas baseChart height=" 140 " [datasets]="barhor4ChartData" [labels]="barhor4ChartLabels" [options]="barhor4ChartOptions" [plugins]="barhor4ChartPlugins" [legend]="barhor4ChartLegend" [chartType]="barhor4ChartType">
+                        </canvas>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 h-100">
+            <div class="card h-100">
+                <div class="row">
+                    <span style="margin-left: 10px;"></span>
+                    <div class="col-lg-6">
+                        <b style="text-align: left;font-weight: bold;font-size:13px;">
+                            QA
+                        </b>
+                        <br>
+                        <b style="text-align: left;font-size:10px;">Al cerrar el mes</b>
+                    </div>
+                    <div class="col-lg-5" style="text-align: end;font-size:10px;">
+                        <label>
+                            En cantidad
+                          </label>
+                    </div>
+                </div>
+                <div class="row justify-content-center mt-2">
+                    <h1 style="font-weight: bold;font-size: 65px;">17</h1>
+                </div>
+                <div class="row">
+                    <br>
+                </div>
+                <div class="row justify-content-center">
+                    <label>Total</label>
+                </div>
+
+                <div class="card-body">
+
+
+                    <hr>
+                    <div class="row">
+                        <canvas baseChart height=" 140 " [datasets]="barhor5ChartData" [labels]="barhor5ChartLabels" [options]="barhor5ChartOptions" [plugins]="barhor5ChartPlugins" [legend]="barhor5ChartLegend" [chartType]="barhor5ChartType">
+                        </canvas>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 h-100">
+            <div class="card h-100">
+                <div class="row">
+                    <span style="margin-left: 10px;"></span>
+                    <div class="col-lg-6">
+                        <b style="text-align: left;font-weight: bold;font-size:11px;">
+                            Cerrados&nbsp;
+                        </b>
+                        <br>
+                        <b style="text-align: left;font-size:10px;">En el mes</b>
+                    </div>
+                    <div class="col-lg-5" style="text-align: end;font-size:10px;">
+                        <label>
+                            En cantidad
+                          </label>
+
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mt-2">
+                    <h1 style="font-weight: bold;font-size: 65px;">1</h1>
+                </div>
+
+                <div class="row">
+                    <br>
+                </div>
+                <div class="row justify-content-center">
+                    <label>Total</label>
+                </div>
+
+                <div class="card-body">
+
+
+                    <hr>
+                    <div class="row">
+                        <canvas baseChart height=" 140 " [datasets]="barhor6ChartData" [options]="barhor6ChartOptions" [plugins]="barhor6ChartPlugins" [legend]="barhor6ChartLegend" [chartType]="barhor6ChartType">
+                        </canvas>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</div>
